@@ -10,6 +10,7 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "dev": "json-server --watch db.json -p 3001 && react-scripts start",
     "start": "react-scripts start",
     "db": "json-server --watch db.json -p 3001",
     "build": "react-scripts build",

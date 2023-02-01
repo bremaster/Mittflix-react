@@ -14,7 +14,7 @@ class Header extends Component {
   }
 
   search = (event) => {
-    if(event.key == 'Enter'){
+    if(event.key === 'Enter'){
       this.props.history.push('/search/'+this.state.searchkey);
       this.setState({searchkey: ''});
     }

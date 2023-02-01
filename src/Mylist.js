@@ -34,7 +34,7 @@ class MovieList extends React.Component {
           <div className="title">
             <h1>My List</h1>
             <div className="titles-wrapper">
-              {this.state.movies.filter(m => m.my_list == true).map((movie) => (
+              {this.state.movies.filter(m => m.my_list === true).map((movie) => (
                 <MovieItem key={movie.id} movie = {movie} reload={this.reload}/>
               ))}
             </div>
