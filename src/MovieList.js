@@ -24,8 +24,7 @@ class MovieList extends React.Component {
         .then((genres) => {
           let sort = [];
           for (var i = genres.length - 1; i >= 0; i--) {
-            let len = movies.filter(m => m.genre_ids.indexOf(genres[i].id)>0).length;
-            if(len > 0){
+            if(movies.filter(m => m.genre_ids.indexOf(genres[i].id)>0).length > 0){
               sort.push(genres[i])
             }
           }

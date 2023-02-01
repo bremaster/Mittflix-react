@@ -1,6 +1,5 @@
 import React from 'react';
 import * as MovieAPI from './MovieAPI';
-import {Link} from 'react-router-dom'
 
 class MovieItem extends React.Component {
   constructor() {
@@ -31,6 +30,7 @@ class MovieItem extends React.Component {
       <div className="movie">
         <img
           src={this.props.movie.poster_path}
+          alt={this.props.movie.poster_path}
         />
         <div className="overlay">
           <div className="title">{this.props.movie.title}</div>
