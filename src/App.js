@@ -8,11 +8,15 @@ class App extends React.Component {
   render = () => {
     return (
       <>
-
-      
         <Route
           exact
           path="/"
+          component={MovieList}
+        />
+
+        <Route
+          exact
+          path="/movielist"
           component={MovieList}
         />
 
