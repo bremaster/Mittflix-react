@@ -16,6 +16,12 @@ class App extends React.Component {
 
         <Route
           exact
+          path="/movielist"
+          component={MovieList}
+        />
+
+        <Route
+          exact
           path="/myList"
           component={Mylist}
         />
