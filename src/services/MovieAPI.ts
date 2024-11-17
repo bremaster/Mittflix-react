@@ -4,7 +4,7 @@ export const getAll = () =>
   fetch(`${api}/movies`)
     .then(response => response.json())
 
-export const addToList = movie =>
+export const addToList = (movie: any) =>
   fetch(`${api}/movies/${movie.id}`,{
     method: 'PATCH',
     headers: {
@@ -13,7 +13,7 @@ export const addToList = movie =>
     body: JSON.stringify({my_list: true})
   }).then(res => res.json());
 
-export const removeFromList = movie =>
+export const removeFromList = (movie: any) =>
     fetch(`${api}/movies/${movie.id}`,{
       method: 'PATCH',
       headers: {
