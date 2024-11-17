@@ -6,6 +6,7 @@ import {
 import MovieList from './pages/MovieList';
 import Mylist from './pages/Mylist';
 import SearchList from './pages/SearchList';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const App = () => {
   return (

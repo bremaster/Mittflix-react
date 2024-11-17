@@ -31,7 +31,7 @@ const MovieList = () => {
           <h1>Results</h1>
           <div className="titles-wrapper">
             {movies.filter(m => m.title.toLowerCase().indexOf(searchKey)>=0).map((movie) => (
-              <MovieItem key={movie.id} movie = {movie} getData={getData}/>
+              <MovieItem key={movie.id} movie = {movie} />
             ))}
           </div>
         </div>

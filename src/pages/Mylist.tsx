@@ -14,13 +14,6 @@ const MovieList = () => {
     })
   }, [])
 
-  const getData = () => {
-    MovieAPI.getAll()
-      .then((data) => {
-        setMovies(data);
-      })
-  }
-
   return (
     <>
       <Header />
@@ -30,7 +23,7 @@ const MovieList = () => {
           <h1>My List</h1>
           <div className="titles-wrapper">
             {movies.filter(m => m.my_list === true).map((movie) => (
-              <MovieItem key={movie.id} movie={movie} getData={getData}/>
+              <MovieItem key={movie.id} movie={movie} />
             ))}
           </div>
         </div>

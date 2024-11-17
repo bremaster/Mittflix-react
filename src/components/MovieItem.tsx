@@ -4,10 +4,8 @@ import { Movie } from '../types';
 
 const MovieItem = ({
   movie,
-  getData
 }: {
   movie: Movie;
-  getData: () => void
 }) => {
   const [toggled, setToggled] = useState<boolean>(movie.my_list);
 
@@ -18,9 +16,6 @@ const MovieItem = ({
       await MovieAPI.addToList(movie);
     }
     setToggled(!toggled)
-    if (getData) {
-      await getData();
-    }
   }
 
   return (
