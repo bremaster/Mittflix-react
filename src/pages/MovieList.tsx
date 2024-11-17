@@ -8,32 +8,32 @@ const MovieList = () => {
   const [movies, setMovies] = useState<Array<Movie>>([]);
   const [genres, setGenres] = useState<Array<Genre>>([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Fetch movies
-        const movieRes = await MovieAPI.getAll();
-        setMovies(movieRes);
+  const getData = async () => {
+    try {
+      // Fetch movies
+      const movieRes = await MovieAPI.getAll();
+      setMovies(movieRes);
 
-        // Fetch genres
-        const genreRes = await MovieAPI.genres();
+      // Fetch genres
+      const genreRes = await MovieAPI.genres();
 
-        let sort: Genre[] = [];
-        for (let i = genreRes.length - 1; i >= 0; i--) {
-          let len = movieRes.filter((m: Movie) => m.genre_ids.includes(Number(genreRes[i].id))).length;
+      let sort: Genre[] = [];
+      for (let i = genreRes.length - 1; i >= 0; i--) {
+        let len = movieRes.filter((m: Movie) => m.genre_ids.includes(Number(genreRes[i].id))).length;
 
-          if (len > 0) {
-            sort.push(genreRes[i]);
-          }
+        if (len > 0) {
+          sort.push(genreRes[i]);
         }
-        sort.sort((a: Genre, b: Genre) => a.name.localeCompare(b.name));
-        setGenres(sort);
-      } catch (error) {
-        console.error("Error fetching data:", error);
       }
-    };
+      sort.sort((a: Genre, b: Genre) => a.name.localeCompare(b.name));
+      setGenres(sort);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
-    fetchData();
+  useEffect(() => {
+    getData();
   }, []); // Dependencies array remains empty to run once on mount
 
   return (
@@ -47,7 +47,7 @@ const MovieList = () => {
               {movies
                 .filter((movie) => movie.genre_ids.includes(Number(genre.id)))
                 .map((movie) => (
-                  <MovieItem key={movie.id} movie={movie} />
+                  <MovieItem key={movie.id} movie={movie} getData={getData} />
                 ))}
             </div>
           </div>

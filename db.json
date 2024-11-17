@@ -100,7 +100,7 @@
         878
       ],
       "id": "11",
-      "my_list": false,
+      "my_list": true,
       "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
       "poster_path": "https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
       "title": "Star Wars",
@@ -114,7 +114,7 @@
         878
       ],
       "id": "118340",
-      "my_list": true,
+      "my_list": false,
       "overview": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
       "poster_path": "https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
       "title": "Guardians of the Galaxy",
@@ -284,7 +284,7 @@
         878
       ],
       "id": "1892",
-      "my_list": true,
+      "my_list": false,
       "overview": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, while the Emperor seeks to destroy the Rebellion once and for all with a second dreaded Death Star.",
       "poster_path": "https://image.tmdb.org/t/p/w500/mDCBQNhR6R0PVFucJl0O4Hp5klZ.jpg",
       "title": "Return of the Jedi",
@@ -341,7 +341,7 @@
         14
       ],
       "id": "209112",
-      "my_list": true,
+      "my_list": false,
       "overview": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
       "poster_path": "https://image.tmdb.org/t/p/w500/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
       "title": "Batman v Superman: Dawn of Justice",
@@ -454,7 +454,7 @@
         14
       ],
       "id": "297802",
-      "my_list": true,
+      "my_list": false,
       "overview": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and false heir to the throne.",
       "poster_path": "https://image.tmdb.org/t/p/w500/5Kg76ldv7VxeX9YlcQXiowHgdX6.jpg",
       "title": "Aquaman",

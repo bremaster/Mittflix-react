@@ -8,11 +8,15 @@ const MovieList = () => {
   const [movies, setMovies] = useState<Array<Movie>>([]);
 
   useEffect(() => {
-    MovieAPI.getAll()
-    .then((data: Array<Movie>) => {
-      setMovies(data);
-    })
+    getData()
   }, [])
+
+  const getData = () => {
+    MovieAPI.getAll()
+      .then((data: Array<Movie>) => {
+        setMovies(data);
+      })
+  }
 
   return (
     <>
@@ -23,7 +27,7 @@ const MovieList = () => {
           <h1>My List</h1>
           <div className="titles-wrapper">
             {movies.filter(m => m.my_list === true).map((movie) => (
-              <MovieItem key={movie.id} movie={movie} />
+              <MovieItem key={movie.id} movie={movie} getData={getData} />
             ))}
           </div>
         </div>
